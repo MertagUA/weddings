@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Запрошення на весілля В'ячеслава та Дарини — 12.09.2026"
+    />
+    <title>В'ячеслав &amp; Дарина — Запрошення на весілля</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marck+Script&family=Montserrat:wght@300;400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-sealed">
+    <!-- ================================================================
+       ЕКРАН 1 — Привідкритий конверт → лист виростає у модальне вікно
+       ================================================================ -->
+    <div class="envelope-screen" id="envelope-screen">
+      <!-- конверт на весь екран із печаткою -->
+      <div
+        class="envelope"
+        id="envelope"
+        role="button"
+        tabindex="0"
+        aria-label="Відкрити запрошення"
+      >
+        <img
+          class="envelope__img"
+          src="images/envelope.png"
+          alt="Конверт із запрошенням"
+        />
+        <!-- воскова печатка (окреме зображення, анімується) -->
+        <img
+          class="wax-seal"
+          id="wax-seal"
+          src="images/seal.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+
+      <p class="envelope__hint" id="envelope-hint">Натисніть, щоб відкрити</p>
+    </div>
+
+    <!-- ================================================================
+       ОСНОВНИЙ ВМІСТ
+       ================================================================ -->
+    <main id="content" aria-hidden="true">
+      <!-- ЕКРАН 2 — Текст запрошення (лист виростає з конверта 1-в-1) -->
+      <section
+        class="section letter"
+        id="letter"
+        style="padding-bottom: 15px; padding-top: 15px"
+      >
+        <div class="letter-card" id="letter-card">
+          <span class="letter-card__ornament" aria-hidden="true">❦</span>
+          <h1 class="letter__title">
+            Дорогі <span id="guest-inline">рідні та друзі</span>!
+          </h1>
+          <p class="letter__lead">
+            Незабаром у нашому житті відбудеться важлива подія&nbsp;— наше
+            весілля!
+          </p>
+          <p class="letter__text">
+            Запрошуємо вас розділити з нами радість цього дня. Подаруйте нам
+            свою підтримку, теплі побажання та щирі посмішки, а ми, своєю
+            чергою, поділимося з вами частинкою нашого щастя.
+          </p>
+          <div class="letter-card__divider" aria-hidden="true">
+            <span></span>♥<span></span>
+          </div>
+          <p class="letter__sign">В'ячеслав &amp; Дарина</p>
+
+          <!-- позначка «гортай вниз» -->
+          <div class="scroll-down" aria-hidden="true">
+            <span class="scroll-down__text">Гортай</span>
+            <span class="scroll-down__arrow"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЕКРАН 3 — Календар із датою в сердечку -->
+      <section class="section calendar-sec" id="date" style="padding-top: 15px">
+        <div class="container narrow">
+          <span class="ornament reveal">❤</span>
+          <h2 class="section__title reveal">Вересень 2026</h2>
+          <div
+            class="calendar reveal"
+            role="img"
+            aria-label="12 вересня 2026 року"
+          >
+            <div class="calendar__weekdays">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span
+              ><span>Пт</span><span>Сб</span><span>Нд</span>
+            </div>
+            <div class="calendar__grid">
+              <span class="empty"></span>
+              <span>1</span><span>2</span><span>3</span><span>4</span
+              ><span>5</span><span>6</span> <span>7</span><span>8</span
+              ><span>9</span><span>10</span><span>11</span>
+              <span class="day-heart"
+                ><span class="heart" aria-hidden="true">♥</span
+                ><span class="d">12</span></span
+              >
+              <span>13</span>
+              <span>14</span><span>15</span><span>16</span><span>17</span
+              ><span>18</span><span>19</span><span>20</span> <span>21</span
+              ><span>22</span><span>23</span><span>24</span><span>25</span
+              ><span>26</span><span>27</span> <span>28</span><span>29</span
+              ><span>30</span>
+            </div>
+          </div>
+          <p class="calendar__caption reveal">Субота, 12 вересня 2026 року</p>
+        </div>
+      </section>
+
+      <!-- ЕКРАН 4 — Локація -->
+      <section class="section location" id="location">
+        <div class="container">
+          <span class="ornament reveal">✦</span>
+          <h2 class="section__title reveal">Локація</h2>
+          <p class="location__name reveal">«Веранда»</p>
+          <p class="location__addr reveal">
+            м. Біла Церква, вул. Ярослава Мудрого 1,<br />
+            3 поверх
+          </p>
+
+          <div class="location__photo photo reveal">
+            <img
+              src="images/image1.png"
+              alt="Інтер'єр закладу «Веранда»"
+              loading="lazy"
+            />
+          </div>
+
+          <a
+            class="btn reveal"
+            href="https://maps.app.goo.gl/FbHegdRK8t8TngZg6"
+            target="_blank"
+            rel="noopener"
+          >
+            Подивитись на мапі
+          </a>
+        </div>
+      </section>
+
+      <!-- ЕКРАН 5 — Таймінг -->
+      <section class="section timing" id="timing">
+        <div class="container narrow">
+          <span class="ornament reveal">❧</span>
+          <h2 class="section__title reveal">Таймінг</h2>
+
+          <ol class="timeline">
+            <li class="timeline__item reveal">
+              <span class="timeline__time">13:00</span>
+              <div class="timeline__body">
+                <h3>Початок свята</h3>
+                <p>
+                  Час для знайомств, спілкування та красивих фотографій перед
+                  початком церемонії. Просимо взяти з собою хороший настрій.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__time">14:00</span>
+              <div class="timeline__body">
+                <h3>Церемонія кохання</h3>
+                <p>
+                  Ви станете свідками створення нашої сім'ї. Разом із вами ми
+                  проживемо один із найважливіших моментів нашого життя.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__time">15:30</span>
+              <div class="timeline__body">
+                <h3>Святкова вечеря і танці</h3>
+                <p>Час для смачної їжі, танців та розваг.</p>
+              </div>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__time">20:30</span>
+              <div class="timeline__body">
+                <h3>Торт і солодкі миті</h3>
+                <p>
+                  Настане час загадати бажання та скуштувати наш весільний торт.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__time">22:00</span>
+              <div class="timeline__body">
+                <h3>Тепле завершення вечора</h3>
+                <p>
+                  Подякуємо один одному за цей особливий день. Заберімо із собою
+                  найкращі емоції.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ЕКРАН 7 — Дрес-код -->
+      <section class="section dresscode" id="dresscode">
+        <div class="container narrow">
+          <span class="ornament reveal">✿</span>
+          <h2 class="section__title reveal">Дрес-код</h2>
+          <p class="dresscode__text reveal">
+            Святковий стиль і гарний настрій&nbsp;— усе, що потрібно для цього
+            дня.
+          </p>
+        </div>
+      </section>
+
+      <!-- ЕКРАН 8 — Відлік часу -->
+      <section class="section countdown" id="countdown">
+        <div class="container">
+          <span class="ornament reveal">♥</span>
+          <h2 class="section__title reveal">Ми скажемо «Так» через…</h2>
+          <div class="countdown__grid reveal" id="countdown-grid">
+            <div class="countdown__cell">
+              <span class="num" data-unit="days">00</span
+              ><span class="lbl">днів</span>
+            </div>
+            <div class="countdown__cell">
+              <span class="num" data-unit="hours">00</span
+              ><span class="lbl">годин</span>
+            </div>
+            <div class="countdown__cell">
+              <span class="num" data-unit="minutes">00</span
+              ><span class="lbl">хвилин</span>
+            </div>
+            <div class="countdown__cell">
+              <span class="num" data-unit="seconds">00</span
+              ><span class="lbl">секунд</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЕКРАН 9 — Святкуйте з нами -->
+      <section class="section finale" id="finale">
+        <div class="container narrow">
+          <span class="ornament reveal">✦</span>
+          <h2 class="section__title reveal">Святкуйте з нами!</h2>
+
+          <div class="finale__photo photo reveal">
+            <img
+              src="images/image1.jpeg"
+              style="object-fit: cover"
+              alt="В'ячеслав та Дарина"
+              loading="lazy"
+            />
+          </div>
+
+          <p class="finale__names reveal">В'ячеслав &amp; Дарина</p>
+          <p class="finale__wait reveal">Чекаємо на вас!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__monogram">В &amp; Д</div>
+      <p class="footer__date">12 · 09 · 2026</p>
+    </footer>
+
+    <script src="guests.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

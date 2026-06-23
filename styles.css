@@ -564,7 +564,7 @@ body.is-open .letter-card {
   content: "♥";
   position: absolute;
   left: 57px;
-  top: 16px;
+  top: 25px;
   font-size: 0.85rem;
   color: var(--green);
   background: var(--pink);

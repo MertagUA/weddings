@@ -91,6 +91,10 @@ body.is-sealed {
   color: var(--green);
   margin-bottom: 10px;
 }
+.ornament svg {
+  display: block;
+  margin: 0 auto;
+}
 
 /* ---------- buttons ---------- */
 .btn {

@@ -739,3 +739,39 @@ body.is-open .letter-card {
     height: 132px;
   }
 }
+
+@media screen and (max-width: 415px) {
+  .countdown__cell {
+    min-width: 70px;
+  }
+
+  .countdown__grid {
+    gap: 12px;
+  }
+
+  .countdown__cell .lbl {
+    font-size: 0.58rem;
+  }
+
+  .countdown__cell .num {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .countdown__cell {
+    min-width: 65px;
+  }
+
+  .countdown__grid {
+    gap: 10px;
+  }
+
+  .countdown__cell .lbl {
+    font-size: 0.5rem;
+  }
+
+  .countdown__cell .num {
+    font-size: 1.7rem;
+  }
+}
